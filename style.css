@@ -1,0 +1,52 @@
+/* CALM FACES — site du jeu. Aucune ressource externe (pas de police Google, pas de traceur) : rien ne part
+   chez un tiers quand on visite la page, ce qui simplifie la politique de confidentialité. */
+:root {
+  --nuit: #08070b;
+  --papier: #ece4d4;
+  --papier-2: #b9b0a0;
+  --encre: #a33a32;
+  --lilas: #a99bc4;
+  --carte: #131117;
+  --trait: #2a2630;
+}
+* { box-sizing: border-box; }
+html { background: var(--nuit); }
+body {
+  margin: 0;
+  background: var(--nuit);
+  color: var(--papier);
+  font: 17px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+a { color: var(--lilas); }
+a:hover { color: var(--papier); }
+.page { max-width: 980px; margin: 0 auto; padding: 0 16px 64px; }
+header.hero { text-align: center; padding: 24px 0 8px; }
+header.hero img { width: min(720px, 100%); height: auto; display: block; margin: 0 auto; }
+.tagline { font-size: 1.25rem; color: var(--papier); margin: 0 auto 8px; max-width: 640px; }
+.sous { color: var(--papier-2); margin: 0 auto 24px; max-width: 640px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 32px; }
+.badge { border: 1px solid var(--trait); border-radius: 999px; padding: 4px 12px; font-size: .9rem; color: var(--papier-2); }
+h2 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; font-size: 1.7rem; margin: 48px 0 12px;
+     border-bottom: 2px solid var(--encre); display: inline-block; padding-bottom: 2px; }
+h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.grille { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.carte { background: var(--carte); border: 1px solid var(--trait); border-radius: 10px; padding: 16px; }
+.carte p { margin: 0; color: var(--papier-2); }
+.captures { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.captures img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--trait); display: block; }
+.avert { border-left: 3px solid var(--encre); padding: 8px 14px; background: var(--carte); color: var(--papier-2); }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--trait); color: var(--papier-2); font-size: .9rem; }
+footer nav a { margin-right: 16px; }
+/* politique de confidentialité */
+.doc h1 { font-family: Georgia, serif; font-weight: normal; font-size: 2rem; margin: 32px 0 4px; }
+.doc .maj { color: var(--papier-2); margin-top: 0; }
+.doc h2 { font-size: 1.35rem; margin-top: 36px; }
+.doc table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; font-size: .95rem; }
+.doc th, .doc td { border: 1px solid var(--trait); padding: 8px 10px; text-align: left; vertical-align: top; }
+.doc th { background: var(--carte); }
+.lang { display: flex; gap: 12px; margin: 16px 0; }
+.a-remplir { background: #3a2a10; color: #f3d7a0; padding: 0 4px; border-radius: 3px; }
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .doc table { display: block; overflow-x: auto; }
+}
